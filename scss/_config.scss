@@ -1,0 +1,34 @@
+$primary-color:#444;
+$diff-text : #eece1a;
+$show-home-image: true;
+$show-image: url(/dist/img/background.jpg);
+$background-opacity: 0.6;
+
+@mixin easeOut {
+    transition: all  .8s ease-out;  //@mixin used to create function in sass 
+    
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img{
+            background: $show-image;
+            background-attachment: fixed;
+            background-size: cover;
+        
+
+        &::after{  // the layer on the screen  // after mean after #bg-img
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2; // z-index push the layer behaind the content if - and over the content if + number  
+            background: rgba($primary-color,$background-opacity);  
+        }
+    }
+        
+    }
+    
+}

@@ -5,9 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Welcome to my portfolio</title>
 </head>
-<body>
-    <h1>hello</h1>
+<body id="bg-img">
+    <!-- <div class="overlay"></div> => no needed because after::#bd-image -->
+    <header>
+        <div class="menu-btn">
+            <div class="btn-lin"></div>
+            <div class="btn-lin"></div>
+            <div class="btn-lin"></div>
+        </div>
+        <nav class="menu">
+            <div class="menu-brandig">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/aboutme.html" class="nav-link">
+                        Aboutme
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/career.index" class="nav-link">
+                      career
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">
+                        how to reach me 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <h1 class="l-heading">Farhan <span id="diff-text">Mubarak</span> </h1>
+        <h2 class="s-heading">programmer,full stack developer,also dreemer</h2>
+        <div class="icons">
+            <a href="#!"><i class="fa-brands fa-twitter fa-2x "></i></a>
+            <a href="#!"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="#!"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        </div>
+        <h3 id="dir1"> click the menu <i class="fa-regular fa-face-smile"></i> </h3> 
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
