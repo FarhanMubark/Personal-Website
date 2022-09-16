@@ -1,0 +1,39 @@
+// menu butten styling 
+
+.menu-btn{
+    position: absolute; // any where 
+    z-index: 3;
+    right: 40px;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line{
+        width: 28px;
+        height: 4px; // height of menu lines
+        margin:0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+    }
+
+    &.close{
+        transform: rotate(180deg);
+
+            .btn-line{
+                &:nth-child(1){ // first menu line
+                   transform: rotate(45deg) translate(5.5px, 6px);
+                   background: red;
+                }
+
+                &:nth-child(2){ // second line
+                    opacity:0 ;
+                 }
+
+                 &:nth-child(3){ // third line
+                    transform: rotate(-45deg) translate(7px, -6.5px);
+                    background: red;   // editing the rotaion of x menu label
+                 }
+            }
+    }
+}
+
+
