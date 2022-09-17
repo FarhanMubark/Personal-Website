@@ -5,7 +5,7 @@ $show-image: url(/dist/img/background.jpg);
 $background-opacity: 0.6;
 
 @mixin easeOut {
-    transition: all  .8s ease-out;  //@mixin used to create function in sass 
+    transition: all  .5s ease-out;  //@mixin used to create function in sass 
     
 }
 
