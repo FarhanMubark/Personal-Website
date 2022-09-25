@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
 
+
 *{
     box-sizing: border-box;
 }
@@ -8,8 +9,9 @@
 body{
     @include background();
     background: $primary-color;
+    color: set-text-color($primary-color);
     height: 100%;
-    margin: 10px;
+    margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
@@ -21,14 +23,14 @@ font-weight: 500;
         font-size: 5rem;  // for only styling h1 this is benefit of sass and [&] to be not nested
     }
     &.s-heading{
-        margin-bottom: 1.5rem;    // 1rem = 16px 
+        margin-bottom: 1.9rem;    // 1rem = 16px 
         padding: 0.3rem 1rem;
-        background: rgba(lighten($primary-color,3),0.5);  // some color change on h2 tage 
+        background: rgba(lighten($primary-color,3),0.4);  // some color change on h2 tage 
     }
 }
 
 a{
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -51,6 +53,7 @@ main{
         margin-bottom: 1em;
 
         a{
+            color: rgb(255, 255, 255);
             padding-right: 1.5rem;  // space between icons
             &:hover{
                 color: $diff-text;
@@ -67,9 +70,182 @@ main{
         }
         
     }
+
+   
+}
+
+
+
+.boxes{
+    display:contents;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    color: set-text-color($diff-text);
+
+    div{
+        font-size: 2rem;
+        border: 3px $diff-text solid;
+        padding: 1.5rem 2.5rem;
+        margin-top: 3rem;
+        @include easeOut;
+        background: rgb(148, 145, 145);
+
+    }
+}
+
+.bio-image{
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $diff-text solid 3px;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.bio{
+    margin-top: 50px;
+}
+
+.job{
+    background: rgb(148, 145, 145);
+    // background: lighten($diff-text,16);
+    padding: .5rem;
+    border: $diff-text  solid;
+
+    h2{
+        color: darken($primary-color,10);
+        font-size: 35px;
+    }
+
+}
+
+.job-1{
+    margin: 8px;
+    margin-top: 3.5rem;
 }
 
 
 
 
 
+
+
+
+
+// responseve 
+
+    @media screen and (max-width: 450px) { // any css added here will have 500px or less
+
+        #home{
+     
+                padding: 2rem;
+                
+            
+                .l-heading{
+                    font-size: 2rem;  
+                }
+                .s-heading{
+                    margin-bottom: 1.5rem; 
+                    margin-top: .8rem;  
+                    padding: 0.1rem .7rem;
+                    background: rgba(lighten($primary-color,3),0.4);  
+                    font-size: .8rem;
+                    height: 50%;
+                }
+                
+                
+             
+        }
+
+        .about-info{
+
+            h1{
+                font-size: 3rem;
+            }
+
+
+                ul{
+                    margin-left: -1.2rem;
+                }
+
+
+            .bio-image{
+                width: 150px;
+                height: 150px;
+                margin-left: 33px;
+                margin-top: .8rem;
+                margin-bottom: 4.5rem;
+            }
+
+            .job{
+                font-size: 10px;
+                margin: -3rem;
+                
+            }
+            h2{
+                font-size: 20px;
+            }
+
+        }
+
+        #contact{
+
+            h1{
+                font-size: 3rem;
+
+            }
+            h2{
+                font-size: 1rem;
+            }
+
+            .boxes{
+
+                span{
+                    font-size: 15px;
+                }
+
+                display: contents;
+              
+                
+            }
+
+            div{
+                font-size: 15px;
+                padding: 20px;
+            }
+
+          
+
+          
+
+        }
+
+        .menu{
+
+        .menu-nav{
+
+            opacity: .9;
+           
+        }
+
+        .nav-link{
+            font-size: 25px;
+        }
+
+    }
+     
+    }
+
+    
+  
+  
+  
+    @media screen and (max-width: 768px) {
+      
+    }
+  
+  
+ 

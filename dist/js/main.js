@@ -2,7 +2,7 @@
 const menubtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
-const menubranding = document.querySelector('.menu-brandig');
+// const menubranding = document.querySelector('.menu-brandig');
 
 // this will bring all above class and but in nav-item
 
@@ -22,7 +22,7 @@ menubtn.addEventListener('click',toggleMenu);
         menubtn.classList.add('close');
         menu.classList.add('show');
         menuNav.classList.add('show');
-        menubranding.classList.add('show');
+        // menubranding.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
 
           
@@ -37,7 +37,7 @@ menubtn.addEventListener('click',toggleMenu);
             menubtn.classList.remove('close');
             menu.classList.remove('show');
             menuNav.classList.remove('show');
-            menubranding.classList.remove('show');
+            // menubranding.classList.remove('show');
             navItems.forEach(item => item.classList.remove('show'));
             showMenu=false;
        
